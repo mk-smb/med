@@ -8,6 +8,10 @@
     }
 }
 
+.owl-prev, .owl-next{
+    display: none;
+}
+
 @layer components{
     
 }

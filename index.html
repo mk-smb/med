@@ -23,167 +23,923 @@
 
 <body>
 
-  <!-- topbar and navbar -->
+    <!-- topbar and navbar -->
     <header class="mb-5">
         <!-- topbar -->
-            <section class="bg-tertiary text-white hidden lg:block py-1 mb-5">
-                <div class="container flex justify-between">
-                    <ul class="relative flex text-[15px]">
-                        <span class="absolute w-[20px] h-px bg-white right-1/2 -translate-x-1/2 rotate-90 top-1/2"></span>
-                        <li class="me-10">
-                            <a href="#">
-                                <i class="fas fa-phone fa-sm me-1"></i>
-                                099107 05147
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://spreadmybusiness.in/">
-                                <i class="fas fa-envelope fa-sm me-1"></i>
-                                info@SpreadMyBusiness
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="flex text-[15px] space-x-5">
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-twitter fa-sm"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-facebook fa-sm"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-google fa-sm"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-instagram fa-sm"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+        <section class="bg-tertiary text-white hidden lg:block py-1 mb-5">
+            <div class="container flex justify-between items-center">
+                <ul class="flex items-center gap-4">
+                    <li class="text-sm">
+                        <a href="#" class="flex items-center">
+                            <i class="fas fa-phone fa-sm me-1"></i>
+                            099107 05147
+                        </a>
+                    </li>
+                    <li class="h-4 w-px bg-white mx-1"></li>
+                    <li class="text-sm">
+                        <a href="https://spreadmybusiness.in/" class="flex items-center">
+                            <i class="fas fa-envelope fa-sm me-1"></i>
+                            info@SpreadMyBusiness
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="flex text-md gap-5 items-center">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-twitter fa-sm"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook fa-sm"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-google fa-sm"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram fa-sm"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <!-- navbar -->
-         <nav class="container mx-auto flex items-center justify-between">
-            <a href="#" class="flex space-x-2 items-center">
-                <img src="assets/images/logo.png" alt="" class="w-[50px]">
-                <span class="text-primary font-bold text-3xl">MediCare</span>
-            </a>
-            <ul class="flex text-[18px] space-x-10">
+        <nav
+            class="container mx-auto flex flex-col lg:flex-row items-start justify-around lg:items-center px-4 lg:px-0 py-2 lg:py-0">
+            <div class="flex items-center justify-between w-full lg:w-auto relative">
+                <a href="#" class="flex gap-2 items-center">
+                    <img src="assets/images/logo.png" alt="MediCare Logo" class="w-[50px]">
+                    <span class="text-primary font-bold text-3xl">MediCare</span>
+                </a>
+                <button class="lg:hidden block text-gray-900 lg:absolute lg:right-0 top-full mt-2" id="menu-toggle">
+                    <i class="fas fa-bars fa-2x"></i>
+                </button>
+            </div>
+            <ul class="hidden lg:flex lg:flex-row lg:space-x-10 mt-2 lg:mt-0 sm:ml-10 sm:leading-10" id="navbar-menu">
+                <li><a href="#" class="text-tertiary sm:text-gray-900">Home</a></li>
+                <li><a href="#" class="transition-all duration-300 hover:text-tertiary">About</a></li>
+                <li><a href="#" class="transition-all duration-300 hover:text-tertiary">Blog</a></li>
+                <li><a href="#" class="transition-all duration-300 hover:text-tertiary">Collection</a></li>
+                <li><a href="#" class="transition-all duration-300 hover:text-tertiary">Shop</a></li>
+                <li><a href="#" class="transition-all duration-300 hover:text-tertiary">Contact Us</a></li>
+            </ul>
+            <ul class="hidden lg:flex gap-5 mt-2 lg:mt-0">
                 <li>
-                <a href="#" class="text-tertiary">Home</a>
+                    <a href="#" class="transition-all duration-300 hover:text-tertiary">
+                        <i class="fas fa-heart"></i>
+                    </a>
                 </li>
                 <li>
-                <a href="#" class="transition-all duration-300 hover:text-tertiary">About</a>
+                    <a href="#" class="transition-all duration-300 hover:text-tertiary">
+                        <i class="fas fa-user"></i>
+                    </a>
                 </li>
                 <li>
-                <a href="#" class="transition-all duration-300 hover:text-tertiary">Blog</a>
-                </li>
-                <li>
-                <a href="#" class="transition-all duration-300 hover:text-tertiary">Collection</a>
-                </li>
-                <li>
-                <a href="#" class="transition-all duration-300 hover:text-tertiary">Shop</a>
-                </li>
-                <li>
-                <a href="#" class="transition-all duration-300 hover:text-tertiary">Contact Us</a>
+                    <a href="#" class="transition-all duration-300 hover:text-tertiary relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span
+                            class="absolute h-5 w-5 rounded-full bg-tertiary text-center pt-[2px] text-white text-[12px] font-medium -top-1/2 left-1/2">2</span>
+                    </a>
                 </li>
             </ul>
-            <ul class="flex space-x-5">
-                <li>
-                <a href="#" class="transition-all duration-300 hover:text-tertiary">
-                    <i class="fas fa-heart"></i>
-                </a>
-                </li>
-                <li>
-                <a href="#" class="transition-all duration-300 hover:text-tertiary">
-                    <i class="fas fa-user"></i>
-                </a>
-                </li>
-                <li>
-                <a href="#" class="transition-all duration-300 hover:text-tertiary relative">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="absolute h-5 w-5 rounded-full bg-tertiary text-center pt-[2px] text-white text-[12px] font-medium -top-2 left-1/2 translate-x-[20%]">2</span>
-                </a>
-                </li>
-            </ul>
-            </nav>      
+        </nav>
+
     </header>
 
-   <!-- banner -->
+    <!-- banner -->
 
-   <section class="h-[100vh] relative" style="background-image: url('assets/images/banner.jpg'); background-repeat: no-repeat; background-position: left; background-size: cover;">
-        <div class="container absolute w-2/3 py-10 top-1/2 -translate-y-1/2">
-            <h2 class="text-gray-900 text-3xl tracking-wide font-semibold mb-5">Medical Products</h2>
-            <h1 class="text-gray-900 font-bold text-6xl tracking-wide mb-10">
+    <section class="h-[80vh] md:h-[100vh] relative bg-cover bg-left"
+        style="background-image: url('assets/images/banner.jpg');">
+        <div class="container absolute w-full md:w-2/3 py-10 top-1/2 transform -translate-y-1/2 px-4 md:px-10">
+            <h2 class="text-gray-900 text-2xl md:text-3xl tracking-wide font-semibold mb-3 md:mb-5">Medical Products
+            </h2>
+            <h1 class="text-gray-900 font-bold text-4xl md:text-6xl tracking-wide mb-5 md:mb-10">
                 <span class="text-white">Upto 20% Off.</span> Hurry
             </h1>
-            <p class="text-white text-2xl font-semibold w-2/3 mb-10">
+            <p class="text-white text-xl md:text-2xl font-semibold w-full md:w-2/3 mb-5 md:mb-10">
                 Get the best Grade A and Generic Medicines from Our Store.
             </p>
-            <a href="#" class="inline-block px-10 py-3 rounded-md bg-white text-gray-900 transition-all duration-300 hover:bg-secondary hover:text-gray-100">
+            <a href="#"
+                class="inline-block px-8 md:px-10 py-2 md:py-3 rounded-md bg-white text-gray-900 transition-all duration-300 hover:bg-secondary hover:text-gray-100">
                 Starts From <i class="fas fa-indian-rupee fa-sm"></i>25
             </a>
         </div>
-   </section>
+    </section>
 
-   <!-- our Products -->
+    <!-- ads -->
 
-   <section class="my-10">
-     <div class="container mx-auto text-center">
-        <h1 class="text-gray-900 text-4xl tracking-wide font-bold mb-5">Our Products</h1>
-        <p class="text-gray-900 text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 my-10">
-            <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
-              <img src="assets/images/medication.jpg" alt="" class="w-full h-[150px] object-contain">
-              <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">Medication</p>
-            </a>
-            <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
-              <img src="assets/images/drugs.png" alt="" class="w-full h-[150px] object-contain">
-              <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">Drugs</p>
-            </a>
-            <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
-              <img src="assets/images/lab.png" alt="" class="w-full h-[150px] object-contain">
-              <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">Laboratory</p>
-            </a>
-            <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
-              <img src="assets/images/thermometer.png" alt="" class="w-full h-[150px] object-contain">
-              <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">Equipments</p>
-            </a>
-            <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
-              <img src="assets/images/weigh.png" alt="" class="w-full h-[150px] object-contain">
-              <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">Devices</p>
-            </a>
-          </div>
-          
-     </div>
-   </section>
+    <section class="my-20">
+        <div class="container mx-auto">
+            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 place-items-center gap-5 lg:px-20">
+                <div class="relative">
+                    <img src="assets/images/feature-img-1.jpg" alt="" class="rounded-xl w-full lg:w-[500px]">
+                    <div class="absolute top-1/2 -translate-y-1/2 sm:left-5 md:left-14 lg:left-10">
+                        <h1
+                            class="text-gray-900 font-semibold sm:text-2xl md:text-3xl lg:text-5xl tracking-wide leading-4">
+                            Save 20% <span class="block text-white font-light text-xl lg:text-3xl">On Sanitizers</span>
+                        </h1>
+                        <p class="sm:text-md md:text-lg lg:text-xl text-gray-900 my-2 lg:my-5">
+                            99.9% Germ Production
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:bg-secondary text-white px-5 py-3 rounded-full uppercase">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="assets/images/feature-img-2.jpg" alt="" class="rounded-xl w-full lg:w-[500px]">
+                    <div class="absolute top-1/2 -translate-y-1/2 sm:right-5 md:right-14 lg:right-10">
+                        <h1
+                            class="text-gray-900 font-semibold sm:text-2xl md:text-3xl lg:text-5xl tracking-wide leading-4">
+                            15% Off<span class="block text-tertiary font-light text-xl lg:text-3xl">On Sanitizers</span>
+                        </h1>
+                        <p class="sm:text-md md:text-lg lg:text-xl text-gray-900 my-2 lg:my-5">
+                            99.9% Germ Production
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:bg-secondary text-white px-5 py-3 rounded-full uppercase">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our Products -->
+
+    <section class="my-10">
+        <div class="container mx-auto text-center">
+            <h1 class="text-gray-900 text-4xl tracking-wide font-bold mb-5">Our Products</h1>
+            <p class="text-gray-900 text-xl">
+                Get The Best Health Product For Yourself Today!
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-10">
+
+                <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
+                    <img src="assets/images/medication.jpg" alt=""
+                        class="w-full h-[150px] object-contain transition-all duration-500 group-hover:scale-105">
+                    <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">
+                        Medication
+                    </p>
+                </a>
+
+                <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
+                    <img src="assets/images/drugs.jpg" alt=""
+                        class="w-full h-[150px] transition-all duration-500 group-hover:scale-105 object-contain">
+                    <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">Drugs</p>
+                </a>
+
+                <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
+                    <img src="assets/images/chemical.png" alt=""
+                        class="w-full h-[150px] transition-all duration-500 group-hover:scale-105 object-contain">
+                    <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">
+                        Laboratory
+                    </p>
+                </a>
+
+                <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
+                    <img src="assets/images/thermometer.png" alt=""
+                        class="w-full h-[150px] transition-all duration-500 group-hover:scale-105 object-contain">
+                    <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">
+                        Equipments
+                    </p>
+                </a>
+
+                <a href="#" class="group flex flex-col items-center justify-between w-full h-[210px] border p-2">
+                    <img src="assets/images/weigh.png" alt=""
+                        class="w-full h-[150px] transition-all duration-500 group-hover:scale-105 object-contain">
+                    <p class="mt-2 text-lg transition-all duration-300 group-hover:text-secondary font-medium">
+                        Devices
+                    </p>
+                </a>
+
+            </div>
+
+            <div class="grid sm:grid-cols-1 mb-6 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/5-15-1000x1000 (1).jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">capsules,</a>
+                            </li>
+                            <li>
+                                <a href="#">medicines,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Vitamin C Tablet
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            60
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-20-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">capsules,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Facial Tissue
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            200
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-10-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">capsules,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Vitamin D3
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            40
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-1 mb-6 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-9-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">capsules,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Folic acid
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            89
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-5-1-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">pharmacies,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            N95 Face Mask
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            55
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-5-6-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">pharmacies</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Hand Gloves
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            80
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-1 mb-6 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-13-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">pharmacies</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Liquid Sanitizer
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            50
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/5-14-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">pharmacies,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Sanitizer Gel
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            50
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/5-19.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">capsules,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Zinc Tablet
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            18
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-1 mb-6 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-7-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">capsules,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Vitamin B12
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            45
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-1-1-1000x1000.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">pills,</a>
+                            </li>
+                            <li>
+                                <a href="#">thermometer</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Object Thermometer
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            200
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/5-17.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">pharmacies,</a>
+                            </li>
+                            <li>
+                                <a href="#">pills</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Digital BP Monitor
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            150
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our special products -->
+
+    <section class="my-10">
+        <div class="container mx-auto text-center">
+            <h1 class="text-gray-900 text-4xl tracking-wide font-bold mb-5">Our Special Products</h1>
+            <p class="text-gray-900 text-xl">
+                Get The Best Health Product For Yourself Today!
+            </p>
+            <div class="grid sm:grid-cols-1 mb-6 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-1-1.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">capsules,</a>
+                            </li>
+                            <li>
+                                <a href="#">Thermometer</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Non Contact Thermometer
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            200
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-3-1.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">thermometer</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Non-Touch Thermometer
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            200
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+                <div class="border transition-all duration-300 hover:border-primary">
+                    <a href="#">
+                        <img src="assets/images/shop-4-4-1.jpg" alt="">
+                    </a>
+
+                    <div class="py-4">
+                        <ul class="flex uppercase text-sm font-light text-gray-400 justify-center mb-2 gap-1">
+                            <li>
+                                <a href="#">pills,</a>
+                            </li>
+                            <li>
+                                <a href="#">thermometer</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-xl font-semibold">
+                            Object Thermometer
+                        </a>
+                        <div class="flex text-sm text-yellow-400 gap-2 justify-center my-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3 text-tertiary">
+                            <i class="fas fa-indian-rupee me-1"></i>
+                            200
+                        </p>
+                        <a href="#"
+                            class="inline-block text-xs bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                            add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+    <!-- news -->
+     <section>
+         <div class="container mx-auto">
+             <div class="text-center mb-10">
+                 <h1 class="text-gray-900 text-4xl tracking-wide font-bold mb-5">Our Latest News</h1>
+                 <p class="text-gray-900 text-xl">
+                     Know Your Surrounding !
+                 </p>
+             </div>
+             <div class="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-6">
+                 <div class="border">
+                     <a href="#">
+                         <img src="assets/images/blog7.jpg" alt="">
+                     </a>
+                     <ul class="border lg:flex items-center justify-center text-sm py-1 hidden md:block">
+                         <li>
+                             <i class="fas fa-calendar text-primary me-1"></i>
+                             January 18, 2024
+                         </li>
+                         <li class="h-4 w-px bg-black mx-5"></li>
+                         <li>
+                             <a href="#">
+                                 <i class="fas fa-message text-primary me-1"></i>
+                                 0 Comments
+                             </a>
+                         </li>
+                     </ul>
+                     <div class="text-center p-2">
+                         <a href="#" class="text-xl font-medium block mt-2 mb-2">Hospital infectious waste</a>
+                         <p class="text-gray-400 text-sm leading-7 mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Nesciunt molestias omnis in repellat iusto minima quia assumenda modi facere commodi?</p>
+                         <ul class="text-sm flex gap-1 mb-2">
+                             <li>
+                                 <a href="#" class="transition-all duration-300 hover:text-primary">Blog,</a>
+                             </li>
+                             <li>
+                                 <a href="#" class="transition-all duration-300 hover:text-primary">Message</a>
+                             </li>
+                         </ul>
+                         <a href="#"
+                             class="inline-block text-xs mb-1 bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                             Read More
+                         </a>
+                     </div>
+                 </div>    
+                 <div class="border">
+                     <a href="#">
+                         <img src="assets/images/blog8.jpg" alt="">
+                     </a>
+                     <ul class="border lg:flex items-center justify-center text-sm py-1 hidden md:block">
+                         <li>
+                             <i class="fas fa-calendar text-primary me-1"></i>
+                             January 18, 2024
+                         </li>
+                         <li class="h-4 w-px bg-black mx-5"></li>
+                         <li>
+                             <a href="#">
+                                 <i class="fas fa-message text-primary me-1"></i>
+                                 0 Comments
+                             </a>
+                         </li>
+                     </ul>
+                     <div class="text-center p-2">
+                         <a href="#" class="text-xl font-medium block mt-2 mb-2">Types of scissors</a>
+                         <p class="text-gray-400 text-sm leading-7 mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Nesciunt molestias omnis in repellat iusto minima quia assumenda modi facere commodi?</p>
+                         <ul class="text-sm flex gap-1 mb-2">
+                             <li>
+                                 <a href="#" class="transition-all duration-300 hover:text-primary">Baby Care,</a>
+                             </li>
+                             <li>
+                                 <a href="#" class="transition-all duration-300 hover:text-primary">YouTube</a>
+                             </li>
+                         </ul>
+                         <a href="#"
+                             class="inline-block text-xs mb-1 bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                             Read More
+                         </a>
+                     </div>
+                 </div>    
+                 <div class="border">
+                     <a href="#">
+                         <img src="assets/images/blog9.jpg" alt="">
+                     </a>
+                     <ul class="border lg:flex items-center justify-center text-sm py-1 hidden md:block">
+                         <li>
+                             <i class="fas fa-calendar text-primary me-1"></i>
+                             January 18, 2024
+                         </li>
+                         <li class="h-4 w-px bg-black mx-5"></li>
+                         <li>
+                             <a href="#">
+                                 <i class="fas fa-message text-primary me-1"></i>
+                                 0 Comments
+                             </a>
+                         </li>
+                     </ul>
+                     <div class="text-center p-2">
+                         <a href="#" class="text-xl font-medium block mt-2 mb-2">Blood pressure machine</a>
+                         <p class="text-gray-400 text-sm leading-7 mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Nesciunt molestias omnis in repellat iusto minima quia assumenda modi facere commodi?</p>
+                         <ul class="text-sm flex gap-1 mb-2">
+                             <li>
+                                 <a href="#" class="transition-all duration-300 hover:text-primary">Creative,</a>
+                             </li>
+                             <li>
+                                 <a href="#" class="transition-all duration-300 hover:text-primary">Design</a>
+                             </li>
+                         </ul>
+                         <a href="#"
+                             class="inline-block text-xs mb-1 bg-primary transition-all duration-300 hover:opacity-90 text-white px-5 py-3 rounded-full uppercase">
+                             Read More
+                         </a>
+                     </div>
+                 </div>    
+                 
+             </div>
+     
+         </div>
+     </section>
 
-   <!-- footer -->
-    <footer class="text-white py-10 relative" style="background-image: url('assets/images/footer-bg.png');background-color: black;background-position: center; background-repeat: no-repeat;background-size: cover;">
+     <!-- partners -->
+
+     <section class="my-16 relative">
+        <div class="container mx-auto text-center">
+            <h1 class="text-gray-900 text-4xl tracking-wide font-bold mb-4">Our Partners</h1>
+            <p class="text-gray-900 text-xl">
+               Know Who Our Partners Are
+            </p>
+            <div class="flex gap-10 absolute top-full left-1/2 -translate-x-1/2">
+                <button class="hero-prev"><i class="fas fa-arrow-left text-primary text-2xl"></i></button>
+                <button class="hero-next"><i class="fas fa-arrow-right text-primary text-2xl"></i></button>
+            </div>
+            <div class="owl-carousel partner-carousel mt-10">
+                <div class="border">
+                    <img src="assets/images/client-8.webp" alt="">
+                </div>
+                <div class="border">
+                    <img src="assets/images/client-1-1.webp" alt="">
+                </div>
+                <div class="border">
+                    <img src="assets/images/client-2-1.webp" alt="">
+                </div>
+                <div class="border">
+                    <img src="assets/images/client-3-1.webp" alt="">
+                </div>
+                <div class="border">
+                    <img src="assets/images/client-4-1.webp" alt="">
+                </div>
+                <div class="border">
+                    <img src="assets/images/client-5-1.webp" alt="">
+                </div>
+                <div class="border">
+                    <img src="assets/images/client-6-1.webp" alt="">
+                </div>
+                <div class="border">
+                    <img src="assets/images/client-7.webp" alt="">
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- footer -->
+    <footer class="text-white py-10 relative"
+        style="background-image: url('assets/images/footer-bg.png');background-color: black;background-position: center; background-repeat: no-repeat;background-size: cover;">
         <div class="container mx-auto my-16 ">
             <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-5 lg:ms-16">
                 <ul class="space-y-4">
                     <li>
                         <a href="#" class="text-primary font-bold text-3xl">
-                           MediCare
+                            MediCare
                         </a>
                     </li>
                     <li>
                         <i class="fas fa-house"></i>
-                        Office No. RZ-144 , Service Road & Main Jagadamba Road, Tughlakabad Extension, Tughlakabad, New Delhi, Delhi 110019
+                        Office No. RZ-144 , Service Road & Main Jagadamba Road, Tughlakabad Extension, Tughlakabad, New
+                        Delhi, Delhi 110019
                     </li>
                     <li class="flex gap-5 items-center">
                         <i class="fas fa-phone"></i>
                         <a href="#" class="transition-all duration-300 hover:text-secondary">
-                             099107 05147
+                            099107 05147
                         </a>
                     </li>
                     <li class="flex gap-5 items-center">
@@ -195,27 +951,32 @@
                     <li>
                         <ul class="flex gap-2">
                             <li>
-                                <a href="#" class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
+                                <a href="#"
+                                    class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
                                     <i class="fab fa-twitter fa-sm"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
+                                <a href="#"
+                                    class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
                                     <i class="fab fa-facebook fa-sm"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
+                                <a href="#"
+                                    class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
                                     <i class="fab fa-google fa-sm"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
+                                <a href="#"
+                                    class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
                                     <i class="fab fa-instagram fa-sm"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
+                                <a href="#"
+                                    class="px-2 inline-block bg-primary transition-all duration-300 hover:bg-secondary">
                                     <i class="fab fa-linkedin-in fa-sm"></i>
                                 </a>
                             </li>
@@ -247,19 +1008,19 @@
                         <h3 class="text-lg font-semibold">Support</h3>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Plaster machine</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Plaster machine</a>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Pedometer</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Pedometer</a>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Cleaning Scissor</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Cleaning Scissor</a>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Smart Mask</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Smart Mask</a>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Pedometer</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Pedometer</a>
                     </li>
                 </ul>
                 <ul class="space-y-4">
@@ -267,34 +1028,43 @@
                         <h3 class="text-lg font-semibold">Information</h3>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Scissors</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Scissors</a>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Glucometer</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Glucometer</a>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Disposable Gloves</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Disposable Gloves</a>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Cleaning Scissor</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Cleaning Scissor</a>
                     </li>
                     <li>
-                        <a href="#"  class="transition-all duration-300 hover:text-secondary">Smart Mask</a>
+                        <a href="#" class="transition-all duration-300 hover:text-secondary">Smart Mask</a>
                     </li>
                 </ul>
             </div>
         </div>
-        
+
         <!-- footer-bottom -->
-         <div class="container mx-auto border-t absolute bottom-0 py-4">
+        <div class="container mx-auto border-t absolute bottom-0 py-4">
             <p class="text-center tracking-wide ">
-                Copyright Powered by <a href="https://spreadmybusiness.in/" class="transition-all duration-300 hover:text-secondary">SpreadMyBusiness</a>
+                Copyright Powered by <a href="https://spreadmybusiness.in/"
+                    class="transition-all duration-300 hover:text-secondary">SpreadMyBusiness</a>
             </p>
-         </div>
+        </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#menu-toggle').click(function () {
+                $('#navbar-menu').toggleClass('hidden block');
+            });
+        });
+    </script>
 </body>
 
 </html>
